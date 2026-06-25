@@ -1,0 +1,15 @@
+export const common = {
+  save: "सहेजें",
+  cancel: "रद्द करें",
+  loading: "लोड हो रहा है...",
+  search: "खोजें",
+  confirm: "पुष्टि करें",
+  delete: "हटाएं",
+  edit: "संपादित करें",
+  submit: "जमा करें",
+  close: "बंद करें",
+  next: "अगला",
+  previous: "पिछला",
+  more: "अधिक",
+  retry: "पुनः प्रयास करें",
+};

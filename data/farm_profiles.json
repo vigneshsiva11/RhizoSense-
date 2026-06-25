@@ -1,0 +1,523 @@
+{
+  "farms": [
+    {
+      "id": "farm_001",
+      "name": "Ravi Kumar's Tomato Farm",
+      "farmer_name": "Ravi Kumar",
+      "location": "Dindigul, Tamil Nadu",
+      "crop": "Tomato",
+      "area_acres": 2,
+      "soil_type": "Red loamy soil",
+      "season": "Kharif 2024",
+      "health_score": 61.3,
+      "score_color": "amber",
+      "status_label": "Needs Attention",
+      "score_breakdown": [
+        {
+          "group": "Nitrogen Fixers",
+          "actual": 0.42,
+          "baseline": 3.0,
+          "ratio_pct": 14.0,
+          "pts_earned": 3.9,
+          "max_pts": 28,
+          "status": "critical"
+        },
+        {
+          "group": "Phosphate Solubilizers",
+          "actual": 0.58,
+          "baseline": 2.5,
+          "ratio_pct": 23.2,
+          "pts_earned": 5.1,
+          "max_pts": 22,
+          "status": "critical"
+        },
+        {
+          "group": "Mycorrhizal Fungi",
+          "actual": 1.2,
+          "baseline": 2.8,
+          "ratio_pct": 42.9,
+          "pts_earned": 7.7,
+          "max_pts": 18,
+          "status": "critical"
+        },
+        {
+          "group": "Biocontrol Agents",
+          "actual": 2.8,
+          "baseline": 3.2,
+          "ratio_pct": 87.5,
+          "pts_earned": 10.5,
+          "max_pts": 12,
+          "status": "healthy"
+        },
+        {
+          "group": "Biodiversity Index",
+          "actual": 3.22,
+          "baseline": 4.5,
+          "ratio_pct": 71.6,
+          "pts_earned": 14.3,
+          "max_pts": 20,
+          "status": "low"
+        }
+      ],
+      "predicted_class": "P_deficient",
+      "class_probabilities": {
+        "Healthy": 0.0,
+        "Multi_deficient": 0.315,
+        "N_deficient": 0.331,
+        "P_deficient": 0.354
+      },
+      "deficiency_keys": [
+        "nitrogen_fixers",
+        "phosphate_solubilizers",
+        "mycorrhizal_fungi"
+      ],
+      "deficiency_count": 3,
+      "recommendations": [
+        {
+          "deficiency_key": "nitrogen_fixers",
+          "deficiency_label": "Nitrogen Fixers",
+          "microbial_name": "Rhizobium + Azospirillum",
+          "product": "Rhizobium + Azospirillum Consortium (IFFCO)",
+          "dose": "250g",
+          "timing": "Seed treatment or first irrigation before sowing",
+          "note": "Avoid applying within 48 hrs of broad-spectrum fungicide. Store below 25°C.",
+          "mechanism": "Fixes atmospheric N₂ into plant-available NH₄⁺, reducing urea dependency by 25-40%",
+          "cost_per_acre": 180,
+          "total_cost_inr": 360
+        },
+        {
+          "deficiency_key": "phosphate_solubilizers",
+          "deficiency_label": "Phosphate Solubilizers",
+          "microbial_name": "Bacillus megaterium + Pseudomonas fluorescens",
+          "product": "PSB Inoculant — Bacillus megaterium (Kribhco)",
+          "dose": "200g",
+          "timing": "Mix into compost, apply 7 days before sowing",
+          "note": "Compatible with Trichoderma. Do not mix with DAP directly.",
+          "mechanism": "Converts locked Ca-P and Fe-P into soluble orthophosphate via organic acid secretion",
+          "cost_per_acre": 150,
+          "total_cost_inr": 300
+        },
+        {
+          "deficiency_key": "mycorrhizal_fungi",
+          "deficiency_label": "Mycorrhizal Fungi",
+          "microbial_name": "Glomus intraradices (VAM)",
+          "product": "VAM Biofertilizer — Vesicular Arbuscular Mycorrhiza (TNAU)",
+          "dose": "500g as root dip or 1kg as soil drench",
+          "timing": "At transplanting stage or 3 days before sowing",
+          "note": "Do not apply phosphate fertilizer simultaneously — high P inhibits colonization.",
+          "mechanism": "Extends root surface area 10x, improving water + micronutrient (Zn, Fe) uptake",
+          "cost_per_acre": 320,
+          "total_cost_inr": 640
+        }
+      ],
+      "top_factors": [
+        {
+          "factor": "Biocontrol agents",
+          "impact": 10.86,
+          "direction": "positive"
+        },
+        {
+          "factor": "Microbial diversity (Shannon)",
+          "impact": -3.92,
+          "direction": "negative"
+        },
+        {
+          "factor": "Nitrogen-fixing bacteria",
+          "impact": -3.07,
+          "direction": "negative"
+        },
+        {
+          "factor": "Phosphate-solubilizing bacteria",
+          "impact": -2.19,
+          "direction": "negative"
+        }
+      ],
+      "seasonal_trend": [
+        {
+          "season": "Kharif 2023",
+          "score": 49.2,
+          "type": "actual"
+        },
+        {
+          "season": "Rabi 2024",
+          "score": 54.4,
+          "type": "actual"
+        },
+        {
+          "season": "Current",
+          "score": 61.3,
+          "type": "actual"
+        },
+        {
+          "season": "Next Season",
+          "score": 74.6,
+          "type": "projected",
+          "note": "Projected score with recommended biofertilizer protocol"
+        }
+      ],
+      "cost_summary": {
+        "chemical_products": "Urea + DAP + MOP",
+        "chemical_total_inr": 4800,
+        "biofert_total_inr": 1300,
+        "saving_inr": 3500,
+        "saving_pct": 73,
+        "per_acre_saving_inr": 1750
+      },
+      "otu_profile": {
+        "nitrogen_fixers_pct": 0.42,
+        "phosphate_solubilizers_pct": 0.58,
+        "mycorrhizal_fungi_pct": 1.2,
+        "biocontrol_agents_pct": 2.8,
+        "nitrifiers_pct": 1.9,
+        "shannon_diversity": 3.22,
+        "species_richness": 142
+      }
+    },
+    {
+      "id": "farm_002",
+      "name": "Suresh Babu's Rice Farm",
+      "farmer_name": "Suresh Babu",
+      "location": "Thanjavur, Tamil Nadu",
+      "crop": "Rice",
+      "area_acres": 3,
+      "soil_type": "Alluvial clay soil",
+      "season": "Samba 2024",
+      "health_score": 20.7,
+      "score_color": "red",
+      "status_label": "Critical — Immediate Action Needed",
+      "score_breakdown": [
+        {
+          "group": "Nitrogen Fixers",
+          "actual": 0.18,
+          "baseline": 3.0,
+          "ratio_pct": 6.0,
+          "pts_earned": 1.7,
+          "max_pts": 28,
+          "status": "critical"
+        },
+        {
+          "group": "Phosphate Solubilizers",
+          "actual": 0.35,
+          "baseline": 2.5,
+          "ratio_pct": 14.0,
+          "pts_earned": 3.1,
+          "max_pts": 22,
+          "status": "critical"
+        },
+        {
+          "group": "Mycorrhizal Fungi",
+          "actual": 0.28,
+          "baseline": 2.8,
+          "ratio_pct": 10.0,
+          "pts_earned": 1.8,
+          "max_pts": 18,
+          "status": "critical"
+        },
+        {
+          "group": "Biocontrol Agents",
+          "actual": 0.52,
+          "baseline": 3.2,
+          "ratio_pct": 16.2,
+          "pts_earned": 2.0,
+          "max_pts": 12,
+          "status": "critical"
+        },
+        {
+          "group": "Biodiversity Index",
+          "actual": 2.61,
+          "baseline": 4.5,
+          "ratio_pct": 58.0,
+          "pts_earned": 11.6,
+          "max_pts": 20,
+          "status": "low"
+        }
+      ],
+      "predicted_class": "Multi_deficient",
+      "class_probabilities": {
+        "Healthy": 0.0,
+        "Multi_deficient": 1.0,
+        "N_deficient": 0.0,
+        "P_deficient": 0.0
+      },
+      "deficiency_keys": [
+        "nitrogen_fixers",
+        "phosphate_solubilizers",
+        "mycorrhizal_fungi",
+        "biocontrol_agents"
+      ],
+      "deficiency_count": 4,
+      "recommendations": [
+        {
+          "deficiency_key": "nitrogen_fixers",
+          "deficiency_label": "Nitrogen Fixers",
+          "microbial_name": "Rhizobium + Azospirillum",
+          "product": "Rhizobium + Azospirillum Consortium (IFFCO)",
+          "dose": "250g",
+          "timing": "Seed treatment or first irrigation before sowing",
+          "note": "Avoid applying within 48 hrs of broad-spectrum fungicide. Store below 25°C.",
+          "mechanism": "Fixes atmospheric N₂ into plant-available NH₄⁺, reducing urea dependency by 25-40%",
+          "cost_per_acre": 180,
+          "total_cost_inr": 540
+        },
+        {
+          "deficiency_key": "phosphate_solubilizers",
+          "deficiency_label": "Phosphate Solubilizers",
+          "microbial_name": "Bacillus megaterium + Pseudomonas fluorescens",
+          "product": "PSB Inoculant — Bacillus megaterium (Kribhco)",
+          "dose": "200g",
+          "timing": "Mix into compost, apply 7 days before sowing",
+          "note": "Compatible with Trichoderma. Do not mix with DAP directly.",
+          "mechanism": "Converts locked Ca-P and Fe-P into soluble orthophosphate via organic acid secretion",
+          "cost_per_acre": 150,
+          "total_cost_inr": 450
+        },
+        {
+          "deficiency_key": "mycorrhizal_fungi",
+          "deficiency_label": "Mycorrhizal Fungi",
+          "microbial_name": "Glomus intraradices (VAM)",
+          "product": "VAM Biofertilizer — Vesicular Arbuscular Mycorrhiza (TNAU)",
+          "dose": "500g as root dip or 1kg as soil drench",
+          "timing": "At transplanting stage or 3 days before sowing",
+          "note": "Do not apply phosphate fertilizer simultaneously — high P inhibits colonization.",
+          "mechanism": "Extends root surface area 10x, improving water + micronutrient (Zn, Fe) uptake",
+          "cost_per_acre": 320,
+          "total_cost_inr": 960
+        },
+        {
+          "deficiency_key": "biocontrol_agents",
+          "deficiency_label": "Biocontrol Agents",
+          "microbial_name": "Trichoderma viride + Bacillus subtilis",
+          "product": "Trichoderma viride Biocontrol Agent (Agri Biotech)",
+          "dose": "1kg mixed with 50kg FYM (farmyard manure)",
+          "timing": "14 days before sowing, incorporate into top 15cm soil",
+          "note": "Effective against Fusarium wilt, Pythium root rot, Sclerotium.",
+          "mechanism": "Parasitizes and outcompetes soil-borne pathogens, reducing crop disease incidence",
+          "cost_per_acre": 120,
+          "total_cost_inr": 360
+        }
+      ],
+      "top_factors": [
+        {
+          "factor": "Biocontrol agents",
+          "impact": -33.09,
+          "direction": "negative"
+        },
+        {
+          "factor": "Microbial diversity (Shannon)",
+          "impact": -2.1,
+          "direction": "negative"
+        },
+        {
+          "factor": "Nitrogen-fixing bacteria",
+          "impact": -1.95,
+          "direction": "negative"
+        },
+        {
+          "factor": "Mycorrhizal fungi",
+          "impact": -1.88,
+          "direction": "negative"
+        }
+      ],
+      "seasonal_trend": [
+        {
+          "season": "Kharif 2023",
+          "score": 10,
+          "type": "actual"
+        },
+        {
+          "season": "Rabi 2024",
+          "score": 13.8,
+          "type": "actual"
+        },
+        {
+          "season": "Current",
+          "score": 20.7,
+          "type": "actual"
+        },
+        {
+          "season": "Next Season",
+          "score": 32.0,
+          "type": "projected",
+          "note": "Projected score with recommended biofertilizer protocol"
+        }
+      ],
+      "cost_summary": {
+        "chemical_products": "Urea + DAP + Zinc sulphate",
+        "chemical_total_inr": 6300,
+        "biofert_total_inr": 2310,
+        "saving_inr": 3990,
+        "saving_pct": 63,
+        "per_acre_saving_inr": 1330
+      },
+      "otu_profile": {
+        "nitrogen_fixers_pct": 0.18,
+        "phosphate_solubilizers_pct": 0.35,
+        "mycorrhizal_fungi_pct": 0.28,
+        "biocontrol_agents_pct": 0.52,
+        "nitrifiers_pct": 1.1,
+        "shannon_diversity": 2.61,
+        "species_richness": 89
+      }
+    },
+    {
+      "id": "farm_003",
+      "name": "Meena Patil's Wheat Farm",
+      "farmer_name": "Meena Patil",
+      "location": "Nashik, Maharashtra",
+      "crop": "Wheat",
+      "area_acres": 5,
+      "soil_type": "Medium black cotton soil",
+      "season": "Rabi 2024",
+      "health_score": 61.8,
+      "score_color": "amber",
+      "status_label": "Needs Attention",
+      "score_breakdown": [
+        {
+          "group": "Nitrogen Fixers",
+          "actual": 2.85,
+          "baseline": 3.0,
+          "ratio_pct": 95.0,
+          "pts_earned": 26.6,
+          "max_pts": 28,
+          "status": "healthy"
+        },
+        {
+          "group": "Phosphate Solubilizers",
+          "actual": 0.28,
+          "baseline": 2.5,
+          "ratio_pct": 11.2,
+          "pts_earned": 2.5,
+          "max_pts": 22,
+          "status": "critical"
+        },
+        {
+          "group": "Mycorrhizal Fungi",
+          "actual": 0.48,
+          "baseline": 2.8,
+          "ratio_pct": 17.1,
+          "pts_earned": 3.1,
+          "max_pts": 18,
+          "status": "critical"
+        },
+        {
+          "group": "Biocontrol Agents",
+          "actual": 3.1,
+          "baseline": 3.2,
+          "ratio_pct": 96.9,
+          "pts_earned": 11.6,
+          "max_pts": 12,
+          "status": "healthy"
+        },
+        {
+          "group": "Biodiversity Index",
+          "actual": 3.8,
+          "baseline": 4.5,
+          "ratio_pct": 84.4,
+          "pts_earned": 16.9,
+          "max_pts": 20,
+          "status": "healthy"
+        }
+      ],
+      "predicted_class": "P_deficient",
+      "class_probabilities": {
+        "Healthy": 0.002,
+        "Multi_deficient": 0.0,
+        "N_deficient": 0.0,
+        "P_deficient": 0.998
+      },
+      "deficiency_keys": [
+        "phosphate_solubilizers",
+        "mycorrhizal_fungi"
+      ],
+      "deficiency_count": 2,
+      "recommendations": [
+        {
+          "deficiency_key": "phosphate_solubilizers",
+          "deficiency_label": "Phosphate Solubilizers",
+          "microbial_name": "Bacillus megaterium + Pseudomonas fluorescens",
+          "product": "PSB Inoculant — Bacillus megaterium (Kribhco)",
+          "dose": "200g",
+          "timing": "Mix into compost, apply 7 days before sowing",
+          "note": "Compatible with Trichoderma. Do not mix with DAP directly.",
+          "mechanism": "Converts locked Ca-P and Fe-P into soluble orthophosphate via organic acid secretion",
+          "cost_per_acre": 150,
+          "total_cost_inr": 750
+        },
+        {
+          "deficiency_key": "mycorrhizal_fungi",
+          "deficiency_label": "Mycorrhizal Fungi",
+          "microbial_name": "Glomus intraradices (VAM)",
+          "product": "VAM Biofertilizer — Vesicular Arbuscular Mycorrhiza (TNAU)",
+          "dose": "500g as root dip or 1kg as soil drench",
+          "timing": "At transplanting stage or 3 days before sowing",
+          "note": "Do not apply phosphate fertilizer simultaneously — high P inhibits colonization.",
+          "mechanism": "Extends root surface area 10x, improving water + micronutrient (Zn, Fe) uptake",
+          "cost_per_acre": 320,
+          "total_cost_inr": 1600
+        }
+      ],
+      "top_factors": [
+        {
+          "factor": "Biocontrol agents",
+          "impact": 11.77,
+          "direction": "positive"
+        },
+        {
+          "factor": "Phosphate-solubilizing bacteria",
+          "impact": -6.62,
+          "direction": "negative"
+        },
+        {
+          "factor": "Mycorrhizal fungi",
+          "impact": -5.22,
+          "direction": "negative"
+        },
+        {
+          "factor": "Nitrogen-fixing bacteria",
+          "impact": 3.69,
+          "direction": "positive"
+        }
+      ],
+      "seasonal_trend": [
+        {
+          "season": "Kharif 2023",
+          "score": 50.6,
+          "type": "actual"
+        },
+        {
+          "season": "Rabi 2024",
+          "score": 57.1,
+          "type": "actual"
+        },
+        {
+          "season": "Current",
+          "score": 61.8,
+          "type": "actual"
+        },
+        {
+          "season": "Next Season",
+          "score": 77.1,
+          "type": "projected",
+          "note": "Projected score with recommended biofertilizer protocol"
+        }
+      ],
+      "cost_summary": {
+        "chemical_products": "Urea + DAP",
+        "chemical_total_inr": 9000,
+        "biofert_total_inr": 2350,
+        "saving_inr": 6650,
+        "saving_pct": 74,
+        "per_acre_saving_inr": 1330
+      },
+      "otu_profile": {
+        "nitrogen_fixers_pct": 2.85,
+        "phosphate_solubilizers_pct": 0.28,
+        "mycorrhizal_fungi_pct": 0.48,
+        "biocontrol_agents_pct": 3.1,
+        "nitrifiers_pct": 1.88,
+        "shannon_diversity": 3.8,
+        "species_richness": 198
+      }
+    }
+  ]
+}

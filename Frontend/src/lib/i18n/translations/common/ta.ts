@@ -1,0 +1,15 @@
+export const common = {
+  save: "சேமிப்பு",
+  cancel: "ரத்து",
+  loading: "ஏற்றப்படுகிறது...",
+  search: "தேடு",
+  confirm: "உறுதிப்படுத்து",
+  delete: "அழி",
+  edit: "திருத்து",
+  submit: "சமர்ப்பி",
+  close: "மூடு",
+  next: "அடுத்து",
+  previous: "முந்தைய",
+  more: "மேலும்",
+  retry: "மீண்டும் முயற்சி செய்",
+};
